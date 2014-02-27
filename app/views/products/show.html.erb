@@ -1,0 +1,15 @@
+<div class="page-header">
+  <%= link_to "Edit", "/products/#{@product.id}/edit", :class => "btn btn-md btn-success pull-right" %>
+  <h1>Product Details</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img class="col-md-12" src="<%= @product.image_url %>">
+  </div>
+  <div class="col-md-8">
+    <h3><%= @product.name %></h3>
+    <p class="lead"><%= number_to_currency(@product.price) %></p>
+    <p><%= @product.description %></p>
+  </div>
+</div>
